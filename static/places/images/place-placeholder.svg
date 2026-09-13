@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+    <rect width="400" height="240" fill="#e8ddce"/>
+    <circle cx="120" cy="150" r="46" fill="#c9b79c"/>
+    <polygon points="0,240 140,110 230,190 400,60 400,240" fill="#d8c7ac"/>
+    <circle cx="330" cy="55" r="26" fill="#f2c94c"/>
+    <text x="200" y="215" font-family="sans-serif" font-size="16" fill="#7a6a53" text-anchor="middle">Куди піти?☕️</text>
+</svg>

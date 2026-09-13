@@ -1,0 +1,180 @@
+:root {
+    --brown: #7a5c3e;
+    --cream: #faf6f0;
+    --card-bg: #ffffff;
+    --border: #e5ddd1;
+    --text: #33291f;
+    --muted: #8a7c6a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+}
+
+a {
+    color: var(--brown);
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 24px;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.site-header .brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.site-header nav a {
+    margin-left: 16px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.site-header nav a:hover {
+    color: var(--brown);
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+}
+
+.hero {
+    text-align: center;
+    padding: 24px 0 8px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+button {
+    background: var(--brown);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.place-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.place-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.place-photo {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.place-card-body {
+    padding: 16px;
+}
+
+.place-card h3 {
+    margin: 0 0 6px;
+}
+
+.place-card h3 a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.place-meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0 0 6px;
+}
+
+.place-rating {
+    color: #d99a2b;
+    margin: 0 0 8px;
+    letter-spacing: 2px;
+}
+
+.place-description {
+    margin: 0 0 8px;
+}
+
+.place-date {
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.place-full {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 16px;
+}
+
+.place-full .place-photo {
+    height: 220px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.place-form p {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.place-form input,
+.place-form select,
+.place-form textarea {
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+}

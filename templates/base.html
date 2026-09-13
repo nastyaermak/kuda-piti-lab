@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Куди піти?{% endblock %} — Куди піти?☕️</title>
+    <link rel="stylesheet" href="{% static 'places/css/style.css' %}">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="{% url 'places:home' %}">Куди піти?☕️</a>
+        <nav>
+            <a href="{% url 'places:home' %}">Головна</a>
+            <a href="{% url 'places:place_list' %}">Список місць</a>
+            <a href="{% url 'places:place_add' %}">Додати місце</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Anastasiia Yermak</p>
+    </footer>
+</body>
+</html>
