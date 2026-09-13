@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ place.name }}{% endblock %}
+
+{% block content %}
+    <a href="{% url 'places:place_list' %}">← До списку місць</a>
+
+    <article class="place-full">
+        <img class="place-photo" src="{% static 'places/images/place-placeholder.svg' %}" alt="Фото місця">
+        <h1>{{ place.name }}</h1>
+        <p class="place-meta">
+            {{ place.place_type }}
+            {% if place.location %}
+                · {{ place.location }}
+            {% else %}
+                · Secret place👀
+            {% endif %}
+        </p>
+        <p class="place-rating" title="Рейтинг {{ place.rating }} з 5">{{ place.stars }}</p>
+        <p class="place-description">{{ place.description }}</p>
+        <p class="place-date">Додано: {{ place.created }}</p>
+    </article>
+{% endblock %}

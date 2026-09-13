@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Список місць{% endblock %}
+
+{% block content %}
+    <h1>Список місць ({{ places|length }})</h1>
+
+    <div class="place-grid">
+        {% for place in places %}
+            {% include "places/_place_preview.html" %}
+        {% empty %}
+            <p class="muted">Список порожній. <a href="{% url 'places:place_add' %}">Додайте перше місце</a>.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

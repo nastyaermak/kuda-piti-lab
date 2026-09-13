@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Головна{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <p class="eyebrow">Куди піти?☕️</p>
+        <h1>Не знаєте куди піти сьогодні?</h1>
+        <p class="muted">
+            Тут зібрані мої улюблені місця для вечері, прогулянки чи відпочинку.
+            Погляньте список сам_і, або дозвольте сайту вирішити за вас.
+        </p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" name="action" value="pick">Куди піти сьогодні?</button>
+        </form>
+    </section>
+
+    {% if featured %}
+        <section>
+            <h2>Сьогодні варто піти сюди</h2>
+            {% include "places/_place_preview.html" with place=featured %}
+        </section>
+    {% elif request.method == "POST" %}
+        <section>
+            <p class="muted">У списку ще немає жодного місця. <a href="{% url 'places:place_add' %}">Додайте перше</a>.</p>
+        </section>
+    {% endif %}
+{% endblock %}
